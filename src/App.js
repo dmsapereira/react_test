@@ -11,6 +11,18 @@ class App extends Component {
   }
 
   getUserInformation() {
+    let login = "dmsapereira";
+
+    //fetch the user and change the state
+    fetch(`https://api.github.com/users/${login}`)
+      .then((data) => data.blob())
+      .then((blob) => blob.text())
+      .then((text) => JSON.parse(text))
+      .then((userData) => this.setState({user: userData}))
+      .then(() => console.log(this.state.user)); 
+    
+    
+
     /*
       TODO: fetch a user from the GitHub API
 
@@ -38,7 +50,7 @@ class App extends Component {
             Click me
           </button>
         </div>
-        <UserInformation />
+        <UserInformation user={this.state.user}/>
       </div>
     );
   }
