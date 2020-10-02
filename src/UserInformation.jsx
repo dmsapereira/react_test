@@ -1,22 +1,26 @@
 import React from 'react';
+import RepoList from './RepoList'
 
 const UserInformation = props => (
   <div>
     <img src={props.user.avatar_url} alt="Missing Avatar"/>
-    <p></p>
+    <p/>
     <b>Login: </b>{props.user.login}
-    <p></p>
+    <p/>
     <b>Name: </b>{props.user.name}
-    <p></p>
+    <p/>
     <b>Company: </b>{props.user.name}
-    <p></p>
+    <p/>
     <b>Location: </b>{props.user.location}
-    <p></p>
+    <p/>
     <b>Bio: </b> {props.user.bio}
-    <p></p>
+    <p/>
     <b>Followers: </b> {props.user.followers}
-    <p></p>
+    <p/>
     <b>Following: </b> {props.user.following}
+    <hr/>
+    <h1>Repos</h1>
+    <RepoList repos={props.repos}/>
   </div>
 );
 
