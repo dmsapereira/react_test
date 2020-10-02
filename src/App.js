@@ -19,7 +19,7 @@ class App extends Component {
       .then((blob) => blob.text())
       .then((text) => JSON.parse(text))
       .then((userData) => this.setState({user: userData}))
-      .then(() => console.log(this.state.user)); 
+      .then(() => document.getElementById("tutorial").hidden = true);
     
     
 
@@ -43,7 +43,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <div className="App-intro">
+        <div id="tutorial" className="App-intro">
           <hr />
           <p>Click on the button to fetch the user information</p>
           <button onClick={this.getUserInformation.bind(this)}>
