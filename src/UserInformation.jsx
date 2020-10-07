@@ -1,5 +1,4 @@
 import React from 'react';
-import RepoList from './RepoList'
 
 const UserInformation = props => (
   <div>
@@ -20,7 +19,6 @@ const UserInformation = props => (
     <b>Following: </b> {props.user.following}
     <hr/>
     <h1>Repos</h1>
-    <RepoList repos={props.repos}/>
   </div>
 );
 
