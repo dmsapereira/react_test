@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import UserInfoControl from './UserInfoControl';
+import UserInfoControl from './user/UserInfoControl';
 
 class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { user: {} , repos:  {}}
+    this.state = {}
   }
 
   render() {
@@ -23,10 +23,9 @@ class App extends Component {
         <hr />
         <div className="App-intro">
           <p>Click on the button to fetch the user information</p>
-          Github username: <input id="login"></input>
-          <br/><br/>
+          <br/>
+          <UserInfoControl />
         </div>
-        <UserInfoControl />
       </div>
     );
   }
